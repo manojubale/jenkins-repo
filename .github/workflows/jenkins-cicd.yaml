@@ -21,7 +21,7 @@ jobs:                                               # Top-level jobs group
         uses: aws-actions/configure-aws-credentials@v2  # AWS action that exchanges OIDC token for AWS STS creds
         with:
           role-to-assume: arn:aws:iam::211116632812:role/aws-github-role  # The IAM role to assume in your AWS account
-          aws-region: ap-south-1                     # Default AWS region for subsequent AWS/ECR commands
+          aws-region: us-east-2                     # Default AWS region for subsequent AWS/ECR commands
 
       - name: Login to ECR                           # Step 3: authenticate Docker client to your ECR registry
         id: login-ecr                                # Give this step an ID so we can reuse its outputs
